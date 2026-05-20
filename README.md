@@ -25,3 +25,25 @@ The platform is built using:
 
 Special thanks to the Arrived.com team for inspiration and the React/Tailwind CSS communities for their continued support and resources.
 
+
+--------------
+## Task:
+Enhance the existing landing page by improving visuals, usability, and theme
+functionality.
+
+Update the landing page with:
+- New background image & updated animation
+- Dark/Light mode toggle in the navbar
+- Smooth transitions between modes
+- Must be fully responsive (desktop, tablet, mobile)
+
+## Deliverables:
+1. Source Code
+  - Updated demo project files.
+  - Compatible with the existing project (React, Next.js, or your stack).
+1. Demo Video
+  - Demo project running locally (npm start or similar).
+  - The landing page before & after the update.
+  - The dark/light toggle in action.
+  - Smooth transitions and responsiveness on different screen sizes.
+  - Brief voiceover or captions describing key improvements. (Optional)
