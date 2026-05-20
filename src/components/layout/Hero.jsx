@@ -9,6 +9,7 @@ import Penthouse_Singapore from '../../assets/Penthouse_Singapore.webp'
 import Penthouse_Stockholm from '../../assets/Penthouse_Stockholm.webp'
 import Penthouse_Vancouver from '../../assets/Penthouse_Vancouver.webp'
 
+import './Hero.css';
 
 const Hero = () => {
   const [heroImage, setHeroImage] = useState(Penthouse_Casablanca);
@@ -47,7 +48,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative h-[600px] flex items-center justify-center"
+      className="hero-section h-[600px] relative flex items-center justify-center"
       style={{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
     >
       <div className="absolute inset-0 overflow-hidden">
@@ -59,9 +60,9 @@ const Hero = () => {
         <div className="absolute inset-0 bg-black bg-opacity-50" />
       </div>
 
-      <div className="relative container text-center text-white space-y-8">
+      <div className="relative break-words container text-center text-white space-y-8">
         <motion.h1
-          className="text-5xl font-bold"
+          className="hero-title text-5xl font-bold text-clip"
           initial={{ opacity: 0, x: -200 }}
           animate={{
             opacity: 1,
@@ -72,7 +73,7 @@ const Hero = () => {
           Invest and Trade in Real Estate with Cryptocurrency
         </motion.h1>
         <motion.p
-          className="text-xl max-w-2xl mx-auto"
+          className="hero-description text-xl"
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1 }}
