@@ -6,6 +6,8 @@ import { FaWallet, FaStore, FaMoneyBillWave, FaExchangeAlt, FaChartLine, FaLock,
 import { SiEthereum } from 'react-icons/si';
 import { FiChevronDown, FiChevronUp } from 'react-icons/fi';
 
+import Hero from '../components/layout/Hero';
+
 function Home() {
   const [openSections, setOpenSections] = useState({});
 
@@ -215,42 +217,14 @@ function Home() {
   return (
     <div className="space-y-16">
       {/* Hero Section */}
-      <section className="relative h-[600px] flex items-center justify-center">
-        <div className="absolute inset-0 overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80"
-            alt="Hero background"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-50" />
-        </div>
-        
-        <div className="relative container text-center text-white space-y-8">
-          <motion.h1 
-            className="text-5xl font-bold"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            Invest and Trade in Real Estate with Cryptocurrency
-          </motion.h1>
-          <motion.p 
-            className="text-xl max-w-2xl mx-auto"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            Own fractional shares of premium properties through NFTs. Start investing with as little as $10.
-          </motion.p>
-        </div>
-      </section>
+      <Hero />
       {/* Investment Steps */}
       <section className="container">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Start Investing in Minutes</h2>
           <p className="text-secondary-600">Your journey to crypto-powered real estate investment</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {investmentSteps.map((step, index) => (
             <motion.div
@@ -281,7 +255,7 @@ function Home() {
             <h2 className="text-3xl font-bold mb-4">How GoldenCity Works</h2>
             <p className="text-secondary-300">Understanding our tokenized real estate platform</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {howItWorks.map((item, index) => (
               <motion.div
@@ -309,7 +283,7 @@ function Home() {
           <h2 className="text-3xl font-bold mb-4">Featured Investment Opportunities</h2>
           <p className="text-secondary-600">Curated properties with verified returns and immediate tokenization</p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProperties.map((property, index) => (
             <motion.div
@@ -333,7 +307,7 @@ function Home() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{property.title}</h3>
                 <p className="text-secondary-600 mb-4">{property.location}</p>
-                
+
                 <div className="flex justify-between items-center mb-4">
                   <div>
                     <p className="text-sm text-secondary-500">Price</p>
@@ -381,7 +355,7 @@ function Home() {
             <h2 className="text-3xl font-bold mb-4">Why Choose GoldenCity</h2>
             <p className="text-secondary-600">Experience the future of real estate investment</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {advantages.map((advantage, index) => (
               <motion.div
@@ -400,7 +374,7 @@ function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* CTA Section */}
       <section className="container">
         <div className="bg-primary-600 rounded-2xl p-8 md:p-12 text-white text-center">
@@ -424,7 +398,7 @@ function Home() {
           </div>
         </div>
       </section>
-      
+
       {/* Blog */}
       <div className="container bg-white py-24">
         <motion.div
@@ -531,7 +505,7 @@ function Home() {
           </div>
         </motion.div>
       </section>
-      
+
       {/* Discord CTA */}
       <section className="py-12 bg-primary-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -584,10 +558,10 @@ function Home() {
 
             <div className="mt-12 lg:mt-0 flex justify-center">
               <div className="bg-white rounded-lg shadow-xl p-8 max-w-sm w-full">
-                <h3 className="text-2xl font-bold text-gray-900 text-center mb-6">
+                <h3 className="text-2xl font-boldtext-promary-600 text-center mb-6">
                   Join Discord
                 </h3>
-                <p className="text-gray-500 text-center mb-8">
+                <p className="text-secondary-600 text-center mb-8">
                   Get instant access to our community and start connecting with other investors
                 </p>
                 <a
@@ -598,7 +572,7 @@ function Home() {
                 >
                   Join Now
                 </a>
-                <p className="mt-4 text-sm text-gray-500 text-center">
+                <p className="mt-4 text-sm text-secondary-600 text-center">
                   Already a member?{' '}
                   <a href="https://discord.gg/GoldenCity" className="text-indigo-600 hover:text-indigo-500">
                     Sign in

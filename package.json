@@ -49,7 +49,7 @@
         "web-vitals": "^2.1.4"
     },
     "scripts": {
-        "start": "concurrently \"node contracts/server.js\" \"react-app-rewired start\"",
+        "start": "concurrently \"node contracts/server.js\" \"react-app-rewired start --port 3020\"",
         "build": "concurrently \"node contracts/server.js\" \"react-app-rewired start\"",
         "test": "concurrently \"node contracts/server.js\" \"react-app-rewired start\"",
         "eject": "concurrently \"node contracts/server.js\" \"react-app-rewired start\""
