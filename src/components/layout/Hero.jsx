@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 import Penthouse_Casablanca from '../../assets/Penthouse_Casablanca.webp'
 import penthouse_generic from '../../assets/penthouse_generic.webp'
@@ -41,22 +41,26 @@ const Hero = () => {
     const interval = setInterval(() => {
       currentIndex = pickRandomIndex(currentIndex);
       setHeroImage(images[currentIndex]);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <section
-      className="hero-section h-[600px] relative flex items-center justify-center"
-      style={{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center' }}
-    >
+    <section className="hero-section h-[600px] relative flex items-center justify-center">
       <div className="absolute inset-0 overflow-hidden">
-        <img
-          src={heroImage}
-          alt="Hero background"
-          className="w-full h-full object-cover"
-        />
+        <AnimatePresence>
+          <motion.img
+            key={heroImage}
+            src={heroImage}
+            alt="Hero background"
+            className="absolute inset-0 w-full h-full object-cover"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1.2, ease: 'easeOut' }}
+          />
+        </AnimatePresence>
         <div className="absolute inset-0 bg-black bg-opacity-50" />
       </div>
 
