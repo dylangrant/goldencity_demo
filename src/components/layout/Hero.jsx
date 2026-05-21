@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 import Penthouse_Casablanca from '../../assets/Penthouse_Casablanca.webp'
-import Penthouse_generic from '../../assets/Penthouse_generic.webp'
+import Penthouse_Generic from '../../assets/Penthouse_Generic.webp'
 import Penthouse_New_York from '../../assets/Penthouse_New_York.webp'
 import Penthouse_Sydney from '../../assets/Penthouse_Sydney.webp'
 import Penthouse_Singapore from '../../assets/Penthouse_Singapore.webp'
@@ -19,7 +19,7 @@ const Hero = () => {
   useEffect(() => {
     const images = [
       Penthouse_Casablanca,
-      Penthouse_generic,
+      Penthouse_Generic,
       Penthouse_New_York,
       Penthouse_Sydney,
       Penthouse_Singapore,

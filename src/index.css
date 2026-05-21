@@ -82,6 +82,26 @@
   .input.bg-white {
     background-color: var(--surface) !important;
   }
+
+  /* Dark mode overrides for secondary backgrounds */
+  .dark .bg-secondary-50,
+  .dark .bg-secondary-100,
+  .dark .bg-secondary-200,
+  .dark .bg-secondary-300,
+  .dark .bg-secondary-400,
+  .dark .bg-secondary-500 {
+    background-color: var(--surface) !important;
+  }
+
+  .dark .bg-secondary-600,
+  .dark .bg-secondary-700 {
+    background-color: var(--surface-soft) !important;
+  }
+
+  .dark .bg-secondary-800,
+  .dark .bg-secondary-900 {
+    background-color: var(--surface-alt) !important;
+  }
 }
 
 .navbar-desktop {
@@ -105,4 +125,20 @@
   .mobile-menu {
     display: block;
   }
+}
+
+html.dark .bg-secondary-50,
+html.dark .bg-secondary-100,
+html.dark .bg-secondary-200,
+html.dark .bg-secondary-300,
+html.dark .bg-secondary-400,
+html.dark .bg-secondary-500 {
+  background-color: var(--surface-soft) !important;
+}
+
+html.dark .bg-secondary-600,
+html.dark .bg-secondary-700,
+html.dark .bg-secondary-800,
+html.dark .bg-secondary-900 {
+  background-color: var(--surface-alt) !important;
 }

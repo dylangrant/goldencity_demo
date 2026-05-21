@@ -1,30 +1,11 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu, FiX, FiMoon, FiSun } from 'react-icons/fi';
+import { useTheme } from '../../context/ThemeContext';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDark, setIsDark] = useState(() => {
-    if (typeof window === 'undefined') return false;
-    try {
-      const savedTheme = localStorage.getItem('theme');
-      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-      return savedTheme ? savedTheme === 'dark' : prefersDark;
-    } catch (e) {
-      return false;
-    }
-  });
-
-  useEffect(() => {
-    document.documentElement.classList.toggle('dark', isDark);
-  }, [isDark]);
-
-  const toggleTheme = () => {
-    const nextMode = !isDark;
-    setIsDark(nextMode);
-    document.documentElement.classList.toggle('dark', nextMode);
-    localStorage.setItem('theme', nextMode ? 'dark' : 'light');
-  };
+  const { isDark, toggleTheme } = useTheme();
 
   const navigation = [
     { name: 'Home', href: '/' },
