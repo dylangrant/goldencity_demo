@@ -2,12 +2,13 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 import Penthouse_Casablanca from '../../assets/Penthouse_Casablanca.webp'
-import penthouse_generic from '../../assets/penthouse_generic.webp'
+import Penthouse_generic from '../../assets/Penthouse_generic.webp'
 import Penthouse_New_York from '../../assets/Penthouse_New_York.webp'
 import Penthouse_Sydney from '../../assets/Penthouse_Sydney.webp'
 import Penthouse_Singapore from '../../assets/Penthouse_Singapore.webp'
 import Penthouse_Stockholm from '../../assets/Penthouse_Stockholm.webp'
 import Penthouse_Vancouver from '../../assets/Penthouse_Vancouver.webp'
+import Penthouse_Guadalajara from '../../assets/Penthouse_Guadalajara.webp'
 
 import './Hero.css';
 
@@ -18,12 +19,13 @@ const Hero = () => {
   useEffect(() => {
     const images = [
       Penthouse_Casablanca,
-      penthouse_generic,
+      Penthouse_generic,
       Penthouse_New_York,
       Penthouse_Sydney,
       Penthouse_Singapore,
       Penthouse_Stockholm,
-      Penthouse_Vancouver
+      Penthouse_Vancouver,
+      Penthouse_Guadalajara,
     ];
 
     const pickRandomIndex = (excludeIndex) => {
@@ -47,7 +49,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="hero-section h-[600px] relative flex items-center justify-center">
+    <section className="hero-section h-[320px] md:h-[600px] relative flex items-center justify-center">
       <div className="absolute inset-0 overflow-hidden">
         <AnimatePresence>
           <motion.img
@@ -66,7 +68,7 @@ const Hero = () => {
 
       <div className="relative break-words container text-center text-white space-y-8">
         <motion.h1
-          className="hero-title text-5xl font-bold text-clip"
+          className="hero-title text-2xl md:text-5xl font-bold text-clip"
           initial={{ opacity: 0, x: -200 }}
           animate={{
             opacity: 1,
@@ -77,7 +79,7 @@ const Hero = () => {
           Invest and Trade in Real Estate with Cryptocurrency
         </motion.h1>
         <motion.p
-          className="hero-description text-xl"
+          className="hero-description text-base md:text-xl"
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 1, delay: 1 }}

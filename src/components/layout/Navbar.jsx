@@ -50,7 +50,7 @@ function Navbar() {
             </Link>
           </div>
 
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          <div className="navbar-desktop items-center space-x-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -77,7 +77,7 @@ function Navbar() {
             </button>
           </div>
 
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="navbar-mobile flex items-center gap-2">
             <button
               type="button"
               onClick={toggleTheme}
@@ -97,7 +97,7 @@ function Navbar() {
         </div>
 
         {isOpen && (
-          <div className="md:hidden">
+          <div className="mobile-menu">
             <div className="pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link

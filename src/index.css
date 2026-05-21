@@ -78,43 +78,31 @@
   .btn.bg-white,
   input.bg-white,
   select.bg-white,
-  textarea.bg-white {
-    background-color: #ffffff !important;
+  textarea.bg-white,
+  .input.bg-white {
+    background-color: var(--surface) !important;
+  }
+}
+
+.navbar-desktop {
+  display: flex;
+}
+
+.navbar-mobile,
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 820px) {
+  .navbar-desktop {
+    display: none;
   }
 
-  .bg-secondary-50 {
-    background-color: var(--surface-soft) !important;
+  .navbar-mobile {
+    display: flex;
   }
 
-  .bg-secondary-100 {
-    background-color: var(--surface-alt) !important;
-  }
-
-  .text-secondary-800 {
-    color: var(--text) !important;
-  }
-
-  .text-secondary-600 {
-    color: var(--muted) !important;
-  }
-
-  .border-secondary-300 {
-    border-color: var(--border) !important;
-  }
-
-  .shadow-sm {
-    box-shadow: var(--shadow) !important;
-  }
-
-  .shadow-md {
-    box-shadow: var(--shadow) !important;
-  }
-
-  .shadow-lg {
-    box-shadow: var(--shadow) !important;
-  }
-
-  .shadow-xl {
-    box-shadow: var(--shadow) !important;
+  .mobile-menu {
+    display: block;
   }
 }
