@@ -127,6 +127,10 @@
   }
 }
 
+html.dark .about-stat-value {
+  color: #ffffff !important;
+}
+
 html.dark .bg-secondary-50,
 html.dark .bg-secondary-100,
 html.dark .bg-secondary-200,

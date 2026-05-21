@@ -88,7 +88,7 @@ function About() {
               Revolutionizing Real Estate Investment
             </h1>
             <p className="text-xl text-secondary-200">
-              We're bridging the gap between traditional real estate and cryptocurrency, 
+              We're bridging the gap between traditional real estate and cryptocurrency,
               making property investment accessible, secure, and transparent through blockchain technology.
             </p>
           </motion.div>
@@ -109,8 +109,8 @@ function About() {
                 className="bg-white rounded-lg p-6 text-center shadow-md"
               >
                 <stat.icon className="w-8 h-8 mx-auto mb-4 text-primary-600" />
-                <div className="text-3xl font-bold text-secondary-900 mb-2">{stat.value}</div>
-                <div className="text-secondary-600">{stat.label}</div>
+                <div className="about-stat-value text-3xl font-bold dark:text-white mb-2">{stat.value}</div>
+                <div className="text-secondary-600 dark:text-secondary-300">{stat.label}</div>
               </motion.div>
             ))}
           </div>
@@ -123,8 +123,8 @@ function About() {
           <div className="max-w-3xl mx-auto text-center mb-16">
             <h2 className="text-3xl font-bold mb-6">Our Mission</h2>
             <p className="text-lg text-secondary-600">
-              To democratize real estate investment by leveraging blockchain technology, 
-              making property ownership accessible to investors worldwide through 
+              To democratize real estate investment by leveraging blockchain technology,
+              making property ownership accessible to investors worldwide through
               fractional ownership and cryptocurrency transactions.
             </p>
           </div>
@@ -141,7 +141,7 @@ function About() {
               </div>
               <h3 className="text-xl font-semibold mb-4">Accessibility</h3>
               <p className="text-secondary-600">
-                Making real estate investment available to everyone through fractional ownership 
+                Making real estate investment available to everyone through fractional ownership
                 and cryptocurrency payments.
               </p>
             </motion.div>
